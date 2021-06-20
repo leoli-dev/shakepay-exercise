@@ -66,8 +66,8 @@ const generateDataPoints = netWorthOrderByDate => {
     const points = []
     for (const [date, netWorth] of Object.entries(netWorthOrderByDate)) {
         points.push({
-            x: new Date(date),
-            y: netWorth,
+            x: new Date(date + 'T23:59:49.137Z'),
+            y: Math.round(netWorth * 100) / 100,
         })
     }
 
